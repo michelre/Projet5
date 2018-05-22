@@ -1,9 +1,5 @@
-<style>
-  @import '../scss/app.scss';
-</style>
-
 <template>
-  <h1>Bonjour {{name}}!</h1>
+  <h1 class="text-center">Bonjour {{name}}!</h1>
 </template>
 
 <script>

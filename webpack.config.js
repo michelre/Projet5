@@ -7,7 +7,9 @@ Encore
     .setPublicPath('/build')
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
-    .enableSassLoader()
+    .enableSassLoader(function(options) {
+      options.includePaths = ['node_modules/bootstrap/scss'];
+    })
     .addEntry('app', './assets/js/index.js')
     .enableVueLoader()
     .configureBabel(function (babelConfig) {
@@ -18,7 +20,7 @@ Encore
 
     // uncomment to define the assets of the project
     // .addEntry('js/app', './assets/js/app.js')
-    // .addStyleEntry('css/app', './assets/css/app.scss')
+    // .addStyleEntry('css/app', './assets/css/index.scss')
 
     // uncomment if you use Sass/SCSS files
     // .enableSassLoader()
